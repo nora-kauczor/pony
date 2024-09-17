@@ -2,7 +2,7 @@ package org.example.pony;
 
 import java.util.List;
 
-public record CharacterResponse (int id, String name, String alias, String sex, String residence, String occupation, List<Kind> kind, List<String> Image) {
+public record Pony(int id, String name, String alias, String sex, String residence, String occupation, List<Kind> kind, List<String> Image) {
 }
 
 /*
