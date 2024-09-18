@@ -3,27 +3,31 @@ package org.example.pony;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RequiredArgsConstructor
 @RestController
 @RequestMapping("api/pony")
 public class PonyController {
 
-    PonyService ponyService;
+    private final PonyService ponyService;
 
     @GetMapping
-    public PonyList getAllPonies() {
+    public List<Pony> getAllPonies() {
         return ponyService.getAllPonies();
     }
 
     @GetMapping("/{id}")
-    public Pony getPony(@RequestParam int id) {
+    public Pony getPony(@PathVariable int id) {
         return ponyService.getPony(id);
     }
 
-    @GetMapping("/episodes/{season}")
-    public EpisodeList getSeasonsEpisodes(@PathVariable int season) {
-        return ponyService.getSeasonsEpisodes(season);
+    @GetMapping("/episode/{id}")
+    public Episode getEpisode(@PathVariable int id) {
+        return ponyService.getEpisode(id);
     }
+
+
 
 
 }

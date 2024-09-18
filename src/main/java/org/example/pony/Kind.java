@@ -1,4 +1,4 @@
-package org.example.pony;
-
-public record Kind(String kind) {
-}
+//package org.example.pony;
+//
+//public record Kind(String kind) {
+//}

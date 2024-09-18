@@ -2,15 +2,15 @@ package org.example.pony;
 
 import java.util.List;
 
-public record Pony(int id, String name, String alias, String sex, String residence, String occupation, List<Kind> kind, List<String> Image) {
+public record Pony(int id, String name, String sex, String residence, String occupation, List<String> kind, List<String> image) {
 }
 
 /*
-[
-  {
+ {
     "id": 1,
     "name": "Twilight Sparkle",
     "alias": "Princess Twilight Sparkle",
+    "url": "https://mlp.fandom.com/wiki/Twilight_Sparkle",
     "sex": "Female",
     "residence": "Canterlot (S1E1, S9E26)\nCastle of Friendship, Ponyville (seasons 5-9)\nGolden Oak Library, Ponyville (seasons 1-4)\nCrystal Princess Palace (toy line)",
     "occupation": "Ruler of Equestria (S9E26)\nFounder/leader of the Council of Friendship (S9E26)\nRuler of the Castle of Friendship (S4E26-S9E26)\nFounder/principal of the School of Friendship (S8E1-S9E20)\nStarlight Glimmer's teacher (S5E26-S7E1)\nGolden Oak Library librarian (seasons 1-4)\nPrincess Celestia's student (seasons 1-3)\nStudent at Celestia's School for Gifted Unicorns (formerly)",
@@ -28,5 +28,4 @@ public record Pony(int id, String name, String alias, String sex, String residen
       "https://vignette.wikia.nocookie.net/mlp/images/0/0c/Twilight_Sparkle_human_at_lockers_EG.png/revision/latest?cb=20141211040145"
     ]
   }
-]
  */
