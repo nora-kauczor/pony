@@ -2,7 +2,8 @@ package org.example.pony;
 
 import java.util.List;
 
-public record Pony(int id, String name, String sex, String residence, String occupation, List<String> kind, List<String> image) {
+public record Pony(int id, String name, String sex, String residence,
+                   String occupation, List<String> kind, List<String> image) {
 }
 
 /*

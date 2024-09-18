@@ -13,7 +13,7 @@ public class PonyService {
     RestClient restClient;
 
     public PonyService(RestClient.Builder builder) {
-        this.restClient = builder.baseUrl("https://ponyapi.net").build();
+        this.restClient = RestClient.create("https://ponyapi.net");
     }
 
     public List<Pony> getAllPonies() {
@@ -37,5 +37,11 @@ public class PonyService {
         return response.data().getFirst();
     }
 
+    public ComicStory getComicStory(int id){
+        String uri = "v1/comics-story/"+id;
+        ComicsStoryResponse response = this.restClient.get().uri(uri).retrieve().body(ComicsStoryResponse.class);
+        assert response != null;
+        return response.data().getFirst();
+    }
 
 }

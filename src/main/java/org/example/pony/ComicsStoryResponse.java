@@ -1,5 +1,7 @@
 package org.example.pony;
 
+import java.util.List;
+
 public record ComicsStoryResponse(int status, List<ComicStory> data) {
 }
 

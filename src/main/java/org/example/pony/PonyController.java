@@ -5,13 +5,15 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RequiredArgsConstructor
+
 @RestController
-@RequestMapping("api/pony")
+@RequestMapping("/api/pony")
 public class PonyController {
 
     private final PonyService ponyService;
-
+public PonyController(PonyService ponyService){
+    this.ponyService = ponyService;
+}
     @GetMapping
     public List<Pony> getAllPonies() {
         return ponyService.getAllPonies();
@@ -27,7 +29,9 @@ public class PonyController {
         return ponyService.getEpisode(id);
     }
 
+@GetMapping("/comics-story/{id}")
+public ComicStory getComicStory(@PathVariable int id) {
+    return ponyService.getComicStory(id);
 
-
-
+}
 }
